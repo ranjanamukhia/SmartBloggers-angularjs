@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Smart Bloggers</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/app.css">
+	<script type="text/javascript" src="scripts/angular.js"></script>
+	<script type="text/javascript" src="scripts/angular-cookies.js"></script>
+	<script type="text/javascript" src="scripts/angular-mocks.js"></script>
+	<script type="text/javascript" src="scripts/angular-route.js"></script>
+  <script type="text/javascript" src="scripts/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="scripts/bootstrap.js"></script>  
+  <script type="text/javascript" src="scripts/bootstrap.min.js"></script> 
+  <script type="text/javascript" src="app/app.js"></script>
+  <script type="text/javascript" src="app/services/encryption.js"></script>
+
+    <script type="text/javascript" src="app/controller/homeController.js"></script>
+    <script type="text/javascript" src="app/controller/userController.js"></script>
+    <script type="text/javascript" src="app/controller/loginController.js"></script>
+    
+    <script type="text/javascript" src="app/controller/accountController.js"></script>
+    
+    <script type="text/javascript" src="app/controller/blogController.js"></script>
+  
+   <script type="text/javascript" src="app/controller/searchController.js"></script>
+  
+  
+  </head>
+  <body ng-app="blogPostingApp" class="mybody">
+  	<div ng-controller="HomeController">
+          <nav class="navbar navbar-default" role="navigation">
+                  <div class="navbar-header">
+                      <a class="navbar-brand" href="#">Smart Bloggers</a>
+                  </div>
+                  <div>
+                    <ul class="nav navbar-nav">
+                        <li>Login</li>
+                        <li>Register</li>
+                    </ul>
+                  </div>                
+           </nav>     
+   	  </div>
+      <div ng-view></div>
+  </body>
+</html> 

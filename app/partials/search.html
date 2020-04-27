@@ -1,0 +1,39 @@
+<div ng-controller="SearchController" ng-show="!showloading">
+	<div class="form-group has-feedback">
+		<span class="glyphicon glyphicon-search form-control-feedback"></span>
+	    <input type="text" class="form-control" id="inputSuccess2" placeholder="Search blogs..." ng-model="tags"/>
+				<br>
+		<button ng-click="searchBlog(tags)" class="btn btn-primary" style="float:right">Search</button>
+	</div>
+	<div class="page-header" ng-show="no_result_found" ng-init="no_result_found = false">
+			<h3>No result Found.</h3>
+		</div>
+
+	<div class="container">
+
+			<div ng-show="searchblogsresults" ng-repeat="blog in blogs | filter:searchFor">
+					<div class="card blog">
+
+						<div class="card-header">
+							{{blog.blogName}}
+						</div>
+						
+						<div class="card-body">
+							<div class="card-title">
+								<div>{{blog.tag}}</div>
+						
+							</div>
+							<div class="card-text">
+								<p>{{blog.content}}</p>
+						
+						    	<blockquote class="blockquote mb-0">
+      							<footer class="blockquote-footer">
+      								{{blog.userName}}
+      							</footer>
+    							</blockquote>
+							</div>
+						</div>
+					</div>
+			
+			</div>	
+</div>

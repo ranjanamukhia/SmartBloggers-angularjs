@@ -1,0 +1,85 @@
+@CHARSET "UTF-8";
+
+.main{
+    text-align:center;
+    width: 50%;
+    margin: 0px;
+    background-color:lightgray;
+}
+
+
+div.blog {
+	float: left;
+	width: 1000px;
+	margin-right: 10px;
+	min-height: 200px;
+	margin: 10px;
+
+}
+
+div.heading {
+	float: left;
+	width: 100px;
+	margin-right: 10px;
+	min-height: 10px;
+	align: center;
+}
+
+div.user {
+	float: left;
+	width: 200px;
+	margin-right: 10px;
+	min-height: 50px;
+}
+div.mybody {
+  padding-left: 150px; 
+  padding-right: 150px;
+}
+
+input[type=text] {
+  padding: 3px;
+  border-radius: 5px;
+  border: 1px solid #bbb;
+}
+
+textarea {
+  padding: 3px;
+  border-radius: 5px;
+  border: 1px solid #bbb;
+}
+mybutton {
+	width: 100px;
+}
+.login-form {
+	max-width: 300px;
+	margin: 0 auto;
+}
+#inputUsername {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+#inputPassword {
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+.login {
+	width:300px;
+	margin: 0 auto;
+    position: relative;
+    transform: translateX(0%) translateY(30%);
+}
+.register {
+	width:300px;
+	margin: 0 auto;
+    position: relative;
+    transform: translateX(0%) translateY(20%);
+}
+.loading {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+

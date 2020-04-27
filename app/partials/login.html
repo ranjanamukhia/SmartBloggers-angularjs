@@ -1,0 +1,17 @@
+<div class="container-sm">
+<form ng-controller="LoginController" ng-show="!showloading">
+  <div class="form-group">
+    <label for="inputUsername">Username</label>
+    <input type="text" class="form-control" id="inputUsername" aria-describedby="UsernameHelp" ng-model="user.userName">
+    
+  </div>
+  <div class="form-group">
+    <label for="inputPassword1">Password</label>
+    <input type="password" class="form-control" id="inputPassword1" ng-model="user.password">
+  </div>
+  <div class="alert alert-danger" role="alert" ng-show="showloginError" ng-init="showloginError=false">{{login_error}}
+  </div>
+  <button type="submit" class="btn btn-primary"  ng-click="loginUser(user)">Submit</button>
+</form>
+</div>
+</div>

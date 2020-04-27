@@ -1,0 +1,57 @@
+<div ng-show="!showloading">
+
+	<div class="container" ng-controller="UserController"  ng-init="showAddUserForm = false">
+		<div class="container page-header" ng-show="!showAddUserForm">
+			<h3>All Users</h3>
+		</div>
+			<div ng-show="!showAddUserForm" class="card blog" ng-repeat="user in users">
+				<div class="card-header">
+					{{ user.userName }}
+				</div>
+				<div class="card-body">
+					<div class="card-title">
+						<b>{{ user.fullName }}</b>
+					</div>
+					<div class="card-text">
+						{{ user.emailId }}
+					</div>
+				</div>
+	</div>
+	
+	  <div style="clear: left"></div>
+	<br>
+
+		<button ng-show="!showAddUserForm" class="btn btn-primary" ng-click="showAddUserForm = true">Add User</button>
+		<div class="well" ng-show="showAddUserForm">
+			<form name="userForm">
+				<div class="form-group">
+					<label for="name">User Name</label> <input type="text"
+						ng-model="user.userName" class="form-control"
+						placeholder="Enter User Name">
+				</div>
+				<div class="form-group">
+					<label for="name">Name</label> <input type="text"
+						ng-model="user.fullName" class="form-control"
+						placeholder="Enter Full Name">
+				</div>
+				<div class="form-group">
+					<label for="Email ID">Email ID</label> <input type="email"
+						ng-model="user.emailId" class="form-control"
+						placeholder="Enter email id" />
+				</div>
+				<div class="form-group">
+					<label for="passord">Password</label> <input type="password"
+						ng-model="user.password" class="form-control"
+						placeholder="Enter password" />
+				</div>
+				<button ng-click="registerUser(user)" class="btn btn-primary" >Add</button>
+				<button value="Update" ng-show="showEditForm"
+					ng-click="updateUser(user)">Update</button>
+				<button ng-click="showAddUserForm = false" class="btn btn-primary">Cancel</button>
+
+				<div class="alert alert-danger alert-dismissible" ng-show="showRegisterError" role="alert" ng-init="showRegisterError=false">{{register_error}}</div>
+	<div class="alert alert-success alert-dismissible" ng-show="showRegisterSuccess" role="alert" ng-init="showRegisterSuccess=false">{{register_success}}</div>
+			</form>
+		</div>
+	</div>
+</div>

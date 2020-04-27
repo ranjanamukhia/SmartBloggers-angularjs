@@ -1,0 +1,58 @@
+
+<div class="container page-header">
+	<h3>My Blogs</h3>
+</div>
+<div class="container" ng-controller="AccountController">
+	<div ng-repeat="blog in  blogs | filter : blog.userName">
+		<div class="card blog">
+			<div class="card-header">
+					{{blog.blogName}}
+			</div>
+			<div class="card-body">
+					<div class="card-title">
+						<div>{{blog.tag}}</div>
+						
+					</div>
+					<div class="card-text">
+						<p>{{blog.content}}</p>
+						
+						    <blockquote class="blockquote mb-0">
+      							<footer class="blockquote-footer">
+      								{{blog.userName}}
+      							</footer>
+    						</blockquote>
+					</div>
+				</div>
+		</div>
+	</div>
+</div>
+
+<div class="container" ng-controller="UserController">
+		<div class="container blog">
+				
+			<h3>My Details</h3>
+
+	
+		<div class="card blog" ng-model="user" style="max-width: 18rem;">
+				
+				<div class="card-header">
+					{{ user.userName }}
+				</div>
+
+				<div lass="card-body">
+					<div class="card-title">
+							
+						<div>{{ user.fullName }}</div>
+							
+					</div>
+
+					<div class="card-text">
+							{{ user.emailId }}
+					</div>
+				</div>
+		</div>
+	</div>
+			
+
+		
+</div>
